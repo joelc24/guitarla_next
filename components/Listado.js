@@ -1,7 +1,14 @@
+import Guitarra from "./Guitarra";
+
 const Listado = ({guitarras}) => {
     return ( 
         <div>
-            <h1>Listado</h1>
+            {guitarras.map(guitarra => (
+                <Guitarra
+                    key={guitarra.url}
+                    guitarra={guitarra}
+                />
+            ))}
         </div>
      );
 }
