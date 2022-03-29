@@ -1,13 +1,14 @@
 import Layout from '../../components/Layout';
 import Image from 'next/image'
 import { formatearFecha } from '../../helpers'
+import styles from '../../styles/Entrada.module.css'
 const EntradaVlog = ({entrada}) => {
     const { contenido, imagen, published_at, titulo } = entrada
     return (
         <Layout>
             <main className="contenedor">
                 <h1 className="heading">{titulo}</h1>
-                <article>
+                <article className={styles.entrada}>
                     <Image
                         layout='responsive'
                         src={imagen.url}
@@ -16,10 +17,10 @@ const EntradaVlog = ({entrada}) => {
                         height={600}
                         priority="true"
                     />
-                    <div>
-                        <p>{formatearFecha(published_at)}</p>
+                    <div className={styles.contenido}>
+                        <p className={styles.fecha}>{formatearFecha(published_at)}</p>
 
-                        <p>{contenido}</p>
+                        <p className={styles.texto}>{contenido}</p>
                     </div>
                 </article>
             </main>    
