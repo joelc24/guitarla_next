@@ -1,3 +1,4 @@
+import Curso from '../components/Curso'
 import Layout from '../components/Layout'
 import Listado from '../components/Listado'
 
@@ -12,8 +13,13 @@ export default function Home({guitarras, curso}) {
           <h1 className="heading">Nuestra Coleccion</h1>
 
           <Listado guitarras={guitarras}/>
+
         </main>
         
+        <Curso
+          curso={curso}
+        />
+
       </Layout>
 
     </div>
