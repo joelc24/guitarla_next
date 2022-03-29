@@ -13,6 +13,7 @@ const Entrada = ({entrada}) => {
                 width={800}
                 height={600}
                 layout="responsive"
+                priority="true"
             />
 
             <div className={styles.contenido}>
